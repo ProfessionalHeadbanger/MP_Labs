@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JMI-8w-09J">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Selection Menu-->
+        <scene sceneID="Jxf-hy-GUk">
+            <objects>
+                <viewController id="fNo-JC-fk6" customClass="imageSelectViewController" customModule="Lab1_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BgK-sN-5T1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="top" axis="vertical" distribution="fillEqually" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="2MJ-0j-6En">
+                                <rect key="frame" x="30" y="188" width="354" height="474"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wb5-tc-5vK">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="67.5"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Локальная картинка 1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectImage:" destination="fNo-JC-fk6" eventType="touchUpInside" id="lSQ-ab-4CT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjT-OJ-yUO">
+                                        <rect key="frame" x="0.0" y="101.5" width="354" height="67.5"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Локальная картинка 2">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectImage:" destination="fNo-JC-fk6" eventType="touchUpInside" id="naF-L0-Ves"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUB-nV-q6r">
+                                        <rect key="frame" x="0.0" y="203" width="354" height="68"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Сетевая картинка 1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectImage:" destination="fNo-JC-fk6" eventType="touchUpInside" id="vem-V7-ivg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NDf-7f-ccZ">
+                                        <rect key="frame" x="0.0" y="305" width="354" height="67.5"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Сетевая картинка 2">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectImage:" destination="fNo-JC-fk6" eventType="touchUpInside" id="8Cr-Mp-Q5o"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CO-6N-TQY">
+                                        <rect key="frame" x="0.0" y="406.5" width="354" height="67.5"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Сетевая картинка 3">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="selectImage:" destination="fNo-JC-fk6" eventType="touchUpInside" id="GJp-A4-YE0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2MJ-0j-6En" firstAttribute="top" secondItem="db5-qc-RnO" secondAttribute="top" constant="100" id="5fP-oK-97h"/>
+                            <constraint firstItem="db5-qc-RnO" firstAttribute="bottom" secondItem="2MJ-0j-6En" secondAttribute="bottom" constant="200" id="ISA-aO-Xw0"/>
+                            <constraint firstItem="db5-qc-RnO" firstAttribute="trailing" secondItem="2MJ-0j-6En" secondAttribute="trailing" constant="30" id="IT4-rL-dCp"/>
+                            <constraint firstItem="2MJ-0j-6En" firstAttribute="leading" secondItem="db5-qc-RnO" secondAttribute="leading" constant="30" id="dUZ-GY-GvH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="db5-qc-RnO"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Selection Menu" id="ujM-gw-77A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GNA-uJ-aMu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920.28985507246387" y="201.5625"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="qxc-82-htY">
+            <objects>
+                <viewController storyboardIdentifier="imageViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FmN-nj-QFP" customClass="imageViewController" customModule="Lab1_3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SkZ-LT-MKE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="6" translatesAutoresizingMaskIntoConstraints="NO" id="hQ6-lQ-UBz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CJE-ds-4y5">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="wyU-qj-nNh"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="hYf-Ie-hox"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hQ6-lQ-UBz" firstAttribute="trailing" secondItem="SkZ-LT-MKE" secondAttribute="trailing" id="9Ic-RH-MWk"/>
+                            <constraint firstAttribute="bottom" secondItem="hQ6-lQ-UBz" secondAttribute="bottom" id="BMg-Wb-3ea"/>
+                            <constraint firstItem="hQ6-lQ-UBz" firstAttribute="leading" secondItem="SkZ-LT-MKE" secondAttribute="leading" id="JbM-Le-vo6"/>
+                            <constraint firstItem="hQ6-lQ-UBz" firstAttribute="top" secondItem="SkZ-LT-MKE" secondAttribute="top" id="V2g-GP-lTF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5Np-fy-Rbv"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="CJE-ds-4y5" id="IC6-LD-2co"/>
+                        <outlet property="scrollView" destination="hQ6-lQ-UBz" id="hZZ-2w-4gK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pCP-Fp-ZwU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1800.0000000000002" y="201.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8cs-vi-M3U">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JMI-8w-09J" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x9b-zB-jpb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fNo-JC-fk6" kind="relationship" relationship="rootViewController" id="HPI-rS-OQg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="04O-As-BvQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10.144927536231885" y="201.5625"/>
+        </scene>
+    </scenes>
+</document>
