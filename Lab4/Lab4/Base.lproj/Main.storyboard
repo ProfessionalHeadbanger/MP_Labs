@@ -64,12 +64,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="descriptionLabel1" destination="fah-Yp-Hwl" id="vbv-71-ZdE"/>
-                        <outlet property="descriptionLabel2" destination="05S-Zn-pML" id="4me-Kx-EEe"/>
-                        <outlet property="dropZone1" destination="n2B-Vt-jx5" id="9Ab-sH-ggx"/>
-                        <outlet property="dropZone2" destination="h5c-GF-7Sd" id="kWB-kd-8SK"/>
-                        <outlet property="galleryView1" destination="8xk-UK-LGi" id="woy-bv-TyA"/>
-                        <outlet property="galleryView2" destination="pZU-Th-ahn" id="gki-9Z-EyT"/>
+                        <outletCollection property="dropZones" destination="n2B-Vt-jx5" collectionClass="NSMutableArray" id="KRK-Ub-Oz6"/>
+                        <outletCollection property="dropZones" destination="h5c-GF-7Sd" collectionClass="NSMutableArray" id="Mjd-p3-uaf"/>
+                        <outletCollection property="labels" destination="fah-Yp-Hwl" collectionClass="NSMutableArray" id="Rdu-fG-Agd"/>
+                        <outletCollection property="labels" destination="05S-Zn-pML" collectionClass="NSMutableArray" id="KNa-7k-D3L"/>
+                        <outletCollection property="galleryViews" destination="8xk-UK-LGi" collectionClass="NSMutableArray" id="4Jw-fE-tWc"/>
+                        <outletCollection property="galleryViews" destination="pZU-Th-ahn" collectionClass="NSMutableArray" id="h3l-7z-DS7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

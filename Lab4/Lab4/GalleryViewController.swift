@@ -9,18 +9,18 @@
 import UIKit
 
 class GalleryViewController: UIViewController, UIDropInteractionDelegate {
-
-    @IBOutlet weak var dropZone1: UIView! {
+    
+    @IBOutlet var dropZones: [UIView]! {
         didSet {
-            dropZone1.addInteraction(UIDropInteraction(delegate: self))
+            for dropZone in dropZones {
+                dropZone.addInteraction(UIDropInteraction(delegate: self))
+            }
         }
     }
     
-    @IBOutlet weak var dropZone2: UIView! {
-        didSet {
-            dropZone2.addInteraction(UIDropInteraction(delegate: self))
-        }
-    }
+    @IBOutlet var galleryViews: [GalleryView]!
+    
+    @IBOutlet var labels: [UILabel]!
     
     func dropInteraction(_ interaction: UIDropInteraction, canHandle session: UIDropSession) -> Bool {
         return session.canLoadObjects(ofClass: NSURL.self) && session.canLoadObjects(ofClass: UIImage.self)
@@ -35,11 +35,10 @@ class GalleryViewController: UIViewController, UIDropInteractionDelegate {
     func dropInteraction(_ interaction: UIDropInteraction, performDrop session: UIDropSession) {
         imageFetcher = ImageFetcher() { (url, image) in
             DispatchQueue.main.async {
-                if interaction.view == self.dropZone1 {
-                    self.galleryView1.backgroundImage = image
-                }
-                else if interaction.view == self.dropZone2 {
-                    self.galleryView2.backgroundImage = image
+                for index in self.dropZones.indices {
+                    if interaction.view == self.dropZones[index] {
+                        self.galleryViews[index].backgroundImage = image
+                    }
                 }
             }
         }
@@ -56,24 +55,14 @@ class GalleryViewController: UIViewController, UIDropInteractionDelegate {
         session.loadObjects(ofClass: NSString.self) {strings in
             if let description = strings.first as? String {
                 DispatchQueue.main.async {
-                    if interaction.view == self.dropZone1 {
-                        self.descriptionLabel1.isHidden = false
-                        self.descriptionLabel1.text = description
-                    }
-                    else if interaction.view == self.dropZone2 {
-                        self.descriptionLabel2.isHidden = false
-                        self.descriptionLabel2.text = description
+                    for index in self.dropZones.indices {
+                        if interaction.view == self.dropZones[index] {
+                            self.labels[index].isHidden = false
+                            self.labels[index].text = description
+                        }
                     }
                 }
             }
         }
     }
-    
-    @IBOutlet weak var galleryView1: GalleryView!
-    
-    @IBOutlet weak var galleryView2: GalleryView!
-    
-    @IBOutlet weak var descriptionLabel1: UILabel!
-    
-    @IBOutlet weak var descriptionLabel2: UILabel!
 }
